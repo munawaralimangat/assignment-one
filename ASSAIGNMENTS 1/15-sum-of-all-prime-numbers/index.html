@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function sumOfPrimes(limit) {
+  let sum = 0;
+  for (let num = 2; num <= limit; num++) {
+    let isPrime = true;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      sum += num;
+    }
+  }
+  return sum;
+}
+const limit = 10;
+const sum = sumOfPrimes(limit);
+document.write(sum);
+    </script>
+    
+</body>
+</html>
